@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="stylesLogin.css">
+</head>
+<body>
+    <div class="input-container" id="inputSection">
+        <h1>Напиши тайната парола</h1>
+        <input type="password" id="passwordInput" placeholder="тайната парола:">
+        <button id="SubmitButton" onclick="checkPassword()">Пробвай!</button>
+        <p id="errorMessage"></p>
+    </div>
+
+    <div class="loading-container" id="loadingSection" style="display: none;">
+        <h2>Зарежда ти изненадата....</h2>
+        <div class="progress-circle-container">
+            <svg class="progress-circle" viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="progress" cx="50" cy="50" r="45"></circle>
+                <text id="progressText" x="50" y="50" dominant-baseline="middle" text-anchor="middle">0%</text>
+            </svg>
+            <img src="kuromi.png" id="loadingImage" alt="Loading Image" class="loading-image">
+        </div>
+    </div>
+
+    <div class="happy-birthday" id="birthdaySection" style="display: none;">
+        <h1 class="animate-birthday">Честит рожден ден Ирен!</h1>
+        <div class="video-holder">
+            <video controls>
+                <source src="sashka.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <a href="sashka.mp4" download class="download-button">Download Video</a>
+    </div>
+    <script src="loginScript.js"></script>
+</body>
+</html>
